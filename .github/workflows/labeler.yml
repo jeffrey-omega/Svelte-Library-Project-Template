@@ -1,0 +1,19 @@
+name: Label issue and pull requests
+
+on: pull_request_target
+
+jobs:
+  label:
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
+    name: Label issue and pull requests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/labeler@v4
+        with:
+          repo-token: '${{ secrets.GITHUB_TOKEN }}'
+          dot: true
+          configuration-path: .github/config/label.yml
+          sync-labels: yes
