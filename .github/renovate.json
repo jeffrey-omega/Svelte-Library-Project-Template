@@ -1,6 +1,6 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": ["config:recommended"],
+	"extends": ["config:recommended", ":gitSignOff"],
 	"timezone": "Europe/Zurich",
 	"schedule": ["after 18:30 on Friday", "before 08:30 on Monday", "every weekend"],
 	"lockFileMaintenance": {
