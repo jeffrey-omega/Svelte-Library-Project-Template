@@ -1,37 +1,50 @@
 actions:
-- '.github/**/*'
+- changed-files:
+  - any-glob-to-any-file: ['**/action.yml', '**/action.yaml', '.github/**/*']
 
 test:
-- src/**/*.spec.js
-- src/**/*.spec.ts
-- src/**/*.test.js
-- src/**/*.test.ts
-- src/**/__tests__/**/*
-- __tests__/**/*
-- tests/**/*
+- changed-files:
+  - any-glob-to-any-file: 
+    [
+      'src/**/*.spec.js',
+      'src/**/*.spec.ts',
+      'src/**/*.test.js',
+      'src/**/*.test.ts',
+      'src/**/__tests__/**/*',
+      '__tests__/**/*',
+      'tests/**/*'
+    ]
 
-documetation:
-- '.docs/**/*'
-- 'docs/**/*'
-- 'doc/**/*'
-- 'documentation/**/*'
+# Add 'Documentation' label to any changes within 'docs' folder or any subfolders
+Documentation:
+- changed-files:
+  - any-glob-to-any-file: 
+    [
+      'docs/**/*', 'doc/**/*', 
+      'documentation/**/*', 
+      '.docs/**/*'
+    ]
 
 ⚙️ configuration:
-- '.idea/**/*'
-- '.github/**/*'
-- '.vscode/**/*'
-- '.husky/**/*'
-- '.lintstagedrc'
-- '.prettierrc'
-- '.eslintrc'
-- '.editorconfig'
-- '.gitignore'
-- '.gitattributes'
-- '.npmignore'
-- '.npmrc'
-- '*.config.js'
-- '*.config.ts'
+- changed-files:
+  - any-glob-to-any-file:
+    [
+      '.idea/**/*',
+      '.github/**/*',
+      '.husky/**/*',
+      '.lintstagedrc',
+      '.prettierrc',
+      '.eslintrc',
+      '.editorconfig',
+      '.gitignore',
+      '.gitattributes',
+      '.npmignore',
+      '.nvimrc',
+      '.npmrc',
+      '*.config.js',
+      '*.config.ts'
+    ]
 
 📦 dependencies:
-- 'package.json'
-- 'package-lock.json'
+- changed-files: 
+  - any-glob-to-any-file: ['package.json', 'package-lock.json', 'yarn.lock', 'pnpm-lock.yaml']
