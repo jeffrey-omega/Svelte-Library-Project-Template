@@ -14,6 +14,5 @@ jobs:
       - uses: actions/labeler@v5
         with:
           repo-token: '${{ secrets.GITHUB_TOKEN }}'
-          dot: true
           configuration-path: .github/config/label.yml
           #sync-labels: true
