@@ -3,7 +3,9 @@ actions:
       - any-glob-to-any-file:
           - '**/action.yml'
           - '**/action.yaml'
-          - .github/**/*
+          - '.github/**/*'
+          - '.github/workflows/**/*'
+
 test:
   - changed-files:
       - any-glob-to-any-file:
@@ -11,33 +13,37 @@ test:
           - src/**/*.spec.ts
           - src/**/*.test.js
           - src/**/*.test.ts
-          - src/**/__tests__/**/*
-          - __tests__/**/*
-          - tests/**/*
+          - 'src/**/__tests__/**/*'
+          - '__tests__/**/*'
+          - 'tests/**/*'
+
 Documentation:
   - changed-files:
       - any-glob-to-any-file:
-          - docs/**/*
-          - doc/**/*
-          - documentation/**/*
-          - .docs/**/*
+          - 'docs/**/*'
+          - 'doc/**/*'
+          - 'documentation/**/*'
+          - '.docs/**/*'
+          - '.doc/**/*'
+
 ⚙️ configuration:
   - changed-files:
       - any-glob-to-any-file:
-          - .idea/**/*
-          - .github/**/*
-          - .husky/**/*
-          - .lintstagedrc
-          - .prettierrc
-          - .eslintrc
-          - .editorconfig
-          - .gitignore
-          - .gitattributes
-          - .npmignore
-          - .nvimrc
-          - .npmrc
+          - '.idea/**/*'
+          - '.github/**/*'
+          - '.husky/**/*'
+          - '.lintstagedrc'
+          - '.prettierrc'
+          - '.eslintrc'
+          - '.editorconfig'
+          - '.gitignore'
+          - '.gitattributes'
+          - '.npmignore'
+          - '.nvimrc'
+          - '.npmrc'
           - '*.config.js'
           - '*.config.ts'
+
 📦 dependencies:
   - changed-files:
       - any-glob-to-any-file:
@@ -45,9 +51,11 @@ Documentation:
           - package-lock.json
           - yarn.lock
           - pnpm-lock.yaml
+
 feature:
   - head-branch:
-      - ^feature
+      - '^feature'
       - feature
+
 release:
   - base-branch: main
