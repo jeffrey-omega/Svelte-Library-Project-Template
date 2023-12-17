@@ -1,58 +1,53 @@
 actions:
-- changed-files:
-  - any-glob-to-any-file: ['**/action.yml', '**/action.yaml', '.github/**/*']
-
+  - changed-files:
+      - any-glob-to-any-file:
+          - '**/action.yml'
+          - '**/action.yaml'
+          - .github/**/*
 test:
-- changed-files:
-  - any-glob-to-any-file: 
-    [
-      'src/**/*.spec.js',
-      'src/**/*.spec.ts',
-      'src/**/*.test.js',
-      'src/**/*.test.ts',
-      'src/**/__tests__/**/*',
-      '__tests__/**/*',
-      'tests/**/*'
-    ]
-
-# Add 'Documentation' label to any changes within 'docs' folder or any subfolders
+  - changed-files:
+      - any-glob-to-any-file:
+          - src/**/*.spec.js
+          - src/**/*.spec.ts
+          - src/**/*.test.js
+          - src/**/*.test.ts
+          - src/**/__tests__/**/*
+          - __tests__/**/*
+          - tests/**/*
 Documentation:
-- changed-files:
-  - any-glob-to-any-file: 
-    [
-      'docs/**/*', 'doc/**/*', 
-      'documentation/**/*', 
-      '.docs/**/*'
-    ]
-
+  - changed-files:
+      - any-glob-to-any-file:
+          - docs/**/*
+          - doc/**/*
+          - documentation/**/*
+          - .docs/**/*
 ⚙️ configuration:
-- changed-files:
-  - any-glob-to-any-file:
-    [
-      '.idea/**/*',
-      '.github/**/*',
-      '.husky/**/*',
-      '.lintstagedrc',
-      '.prettierrc',
-      '.eslintrc',
-      '.editorconfig',
-      '.gitignore',
-      '.gitattributes',
-      '.npmignore',
-      '.nvimrc',
-      '.npmrc',
-      '*.config.js',
-      '*.config.ts'
-    ]
-
+  - changed-files:
+      - any-glob-to-any-file:
+          - .idea/**/*
+          - .github/**/*
+          - .husky/**/*
+          - .lintstagedrc
+          - .prettierrc
+          - .eslintrc
+          - .editorconfig
+          - .gitignore
+          - .gitattributes
+          - .npmignore
+          - .nvimrc
+          - .npmrc
+          - '*.config.js'
+          - '*.config.ts'
 📦 dependencies:
-- changed-files: 
-  - any-glob-to-any-file: ['package.json', 'package-lock.json', 'yarn.lock', 'pnpm-lock.yaml']
-
-# Add 'feature' label to any PR where the head branch name starts with `feature` or has a `feature` section in the name
+  - changed-files:
+      - any-glob-to-any-file:
+          - package.json
+          - package-lock.json
+          - yarn.lock
+          - pnpm-lock.yaml
 feature:
- - head-branch: ['^feature', 'feature']
-
- # Add 'release' label to any PR that is opened against the `main` branch
+  - head-branch:
+      - ^feature
+      - feature
 release:
- - base-branch: 'main'
+  - base-branch: main
