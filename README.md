@@ -1,3 +1,8 @@
+# Svelte Library Project Template
+
+![screenshot](./static/screenshot-dark.png#gh-dark-mode-only)
+![screenshot](./static/screenshot-light.png#gh-light-mode-only)
+
 # create-svelte
 
 Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
